@@ -2,5 +2,10 @@ module.exports = function(app) {
 
 	var controller = app.controllers.evento;
 
-	app.get('/', controller.index);
+	app.route('/eventos')
+		.get(controller.list)
+		.post(controller.save);
+
+	app.route('/eventos/:id')
+		.get(controller.get);
 };

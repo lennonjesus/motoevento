@@ -14,6 +14,10 @@ module.exports = function() {
 		data: {
 			type: String,
 			required: true,
+		},
+		local: {
+			type: String,
+			required: true
 		}
 	});
 

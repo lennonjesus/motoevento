@@ -1,10 +1,9 @@
 
 <div class="jumbotron">
 	<h1>Eventos Motociclísticos</h1>
-
-	
 </div>
 
+<!--
 <div class="alert alert-success" role="alert">
 	Sucesso!
 </div>
@@ -20,10 +19,13 @@
 <div class="alert alert-danger">
 	Perigo!
 </div>
+-->
 
 <div class="page-header">
 	Test
 </div>
+
+<a ng-href="#/evento" class="btn btn-primary">Novo</a>
 
 <table class="table">
 	<thead>
@@ -35,16 +37,15 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr>
-			<td>a1</td>
-			<td>b1</td>
-			<td>c1</td>
-			<td>d1</td>
+		<tr ng-repeat="evento in eventos">
+			<td>
+				<a ng-href="#/evento/{{evento._id}}">
+					{{evento.nome}}
+				</a>
+			</td>
+			<td>{{evento.data}}</td>
+			<td>{{evento.local}}</td>
+			<td>{{evento.tipo}}</td>
 		</tr>
-		<tr>
-			<td>a2</td>
-			<td>b2</td>
-			<td>c2</td>
-			<td>d2</td>
 	</tbody>
 </table>

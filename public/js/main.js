@@ -11,7 +11,7 @@ angular.module('motoevento', ['ngRoute', 'ngResource'])
 			controller: 'EventoController'
 		});
 
-		$routeProvider.when('/evento/:id', {
+		$routeProvider.when('/evento/:eventoId', {
 			templateUrl: 'partials/evento.html',
 			controller: 'EventoController'
 		});
